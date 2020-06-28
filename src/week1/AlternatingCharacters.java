@@ -1,3 +1,6 @@
+package week1;
+
+// https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=arrays
 public class AlternatingCharacters {
 
   public static void main(String[] args) {
@@ -24,5 +27,17 @@ public class AlternatingCharacters {
     }
     return count;
   }
+
+/*  static int alternatingCharactersStream(String s) {
+    s.chars().reduce("C", (previous, s) -> {
+      if (s == previous) {
+        count++;
+      }
+
+    };
+    return 1;
+  }
+
+ */
 
 }

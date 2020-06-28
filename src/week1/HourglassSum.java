@@ -1,3 +1,6 @@
+package week1;
+
+// https://www.hackerrank.com/challenges/alternating-characters/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
 public class HourglassSum {
   public static void main(String[] args) {
     int[][] arr1 = {
@@ -30,6 +33,10 @@ public class HourglassSum {
     System.out.println(hourglassSum(arr2));
     System.out.println(hourglassSum(arr3));
 
+    System.out.println(hourglassSum_v1(arr1));
+    System.out.println(hourglassSum_v1(arr2));
+    System.out.println(hourglassSum_v1(arr3));
+
   }
 
 
@@ -41,6 +48,26 @@ public class HourglassSum {
         for (int k = i - 1; k < i + 2; k = k + 2) {
           for (int l = j - 1; l < j + 2; l++) {
             sum += m[k][l];
+          }
+        }
+        max = Math.max(max, sum);
+      }
+    }
+    return max;
+  }
+  static int hourglassSum_v1(int[][] m) {
+    int[][] m1 = {
+        {1, 1, 1},
+        {0, 1, 0},
+        {1, 1, 1}
+    };
+    int max = -64;
+    for (int i = 0; i < m.length - 2; i++) {
+      for (int j = 0; j < m[i].length - 2; j++) {
+        int sum = 0;
+        for (int k = 0; k < m.length; k++) {
+          for (int l = 0; l < m[k].length; l++) {
+            sum += m1[k][l] * m[i][j];
           }
         }
         max = Math.max(max, sum);
