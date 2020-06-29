@@ -49,13 +49,10 @@ public class MakeAnagram {
       }
       i++;
     }
-    if (shortersMap.isEmpty()) {
-      return delCounter + (end - i);
-    }
-    for (Map.Entry entry : shortersMap.entrySet()) {
-      delCounter += (int) entry.getValue();
-    }
-    return delCounter;
+    return shortersMap.isEmpty() ? (delCounter + (end - i)) : shortersMap.values()
+        .stream()
+        .filter(integer -> integer > 0)
+        .reduce(delCounter, Integer::sum);
   }
 
 }
