@@ -17,6 +17,10 @@ public class RansomNote {
   }
 
   private static void checkMagazine(String[] magazine, String[] note) {
+    if (note.length > magazine.length) {
+      System.out.println("No");
+      return;
+    }
     Map<String, Integer> noteMap = textArrayToWordMap(note);
     int i = 0;
     while (!noteMap.isEmpty() && i < magazine.length) {
@@ -33,7 +37,6 @@ public class RansomNote {
     System.out.println(noteMap.isEmpty() ? "Yes" : "No");
   }
 
-
   private static Map<String, Integer> textArrayToWordMap(String[] text) {
     Map<String, Integer> dictionary = new HashMap<>();
     for (String word : text) {
@@ -45,6 +48,5 @@ public class RansomNote {
     }
     return dictionary;
   }
-
 
 }

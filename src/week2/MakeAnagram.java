@@ -15,9 +15,8 @@ public class MakeAnagram {
   private static int makeAnagram(String a, String b) {
     if (a.length() < b.length()) {
       return getExtras(stringToHashmap(a), b);
-    } else {
-      return getExtras(stringToHashmap(b), a);
     }
+    return getExtras(stringToHashmap(b), a);
   }
 
   private static Map<Character, Integer> stringToHashmap(String shorter) {

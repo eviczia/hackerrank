@@ -25,5 +25,4 @@ public class LeftRotation {
     return leftRotated;
   }
 
-
 }
