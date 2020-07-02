@@ -1,11 +1,11 @@
-package xor;
+package binarypics.and;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class RainbowBoxFunction {
+public class DrawAND {
 
   static int WIDTH = 2 * 256;
   static int HEIGHT = 2 * 256;
@@ -16,9 +16,9 @@ public class RainbowBoxFunction {
 
     for (int i = 0; i < d; i++) {
       for (int j = 0; j < d; j++) {
-        int red = i ^ j;
-        int green = i ^ j;
-        int blue = i ^ j;
+        int red = i & j;
+        int green = i & j;
+        int blue = i & j;
         graphics.setColor(new Color(red, green, blue));
         graphics.fillRect(i * sqSize, j * sqSize, sqSize, sqSize);
       }
@@ -26,7 +26,7 @@ public class RainbowBoxFunction {
   }
 
   public static void main(String[] args) {
-    JFrame jFrame = new JFrame("Drawing");
+    JFrame jFrame = new JFrame("AND");
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     ImagePanel panel = new ImagePanel();
     panel.setPreferredSize(new Dimension(WIDTH, HEIGHT));
