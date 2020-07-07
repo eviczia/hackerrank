@@ -1,5 +1,5 @@
 //https://www.hackerrank.com/challenges/diagonal-difference/problem
-package week3;
+/* package week3;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +23,18 @@ public class DiagonalDifference {
     }
     return Math.abs(dd);
   }
+
+  public static int diagonalDifferenceStream(List<List<Integer>> arr) {
+    arr.li stream().map(List::listIterator).
+    int dd = 0;
+    for (int i = 0; i < arr.size(); i++) {
+      List<Integer> currentLine = arr.get(i);
+      dd += currentLine.get(i) - currentLine.get(currentLine.size() - i - 1);
+    }
+    return Math.abs(dd);
+  }
+
 }
 
 
+*/
