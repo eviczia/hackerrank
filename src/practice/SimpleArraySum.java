@@ -1,7 +1,7 @@
+//https://www.hackerrank.com/challenges/simple-array-sum/problem?h_r=profile
 package practice;
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class SimpleArraySum {
 

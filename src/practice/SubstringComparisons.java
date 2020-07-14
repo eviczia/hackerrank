@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/challenges/java-string-compare/problem
 package practice;
 
 public class SubstringComparisons {
